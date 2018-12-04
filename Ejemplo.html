@@ -1,15 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html>  
   <head>
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-  </head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> 
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>   
+
   <body>
-    <a-scene>
-      <a-box position="0 2 -4" rotation="0 0 0" color="#EF2"></a-box>
-      <a-box position="0 1 -4" rotation="0 0 0" width color="#EF2"></a-box>
-      
-      
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#E7A864"></a-sky>
-    </a-scene>
-  </body>
-</html>
+    <a-scene embedded arjs>
+      <a-entity scale=".2 .2 .2"> 
+        <a-entity gltf-model="fox.glb" scale="3 3 3" crossOrigin="anonymous">
+        </a-entity>
+        <a-marker-camera preset='hiro'></a-marker-camera>
+        </a-scene>
+      </body>
+    </html>
